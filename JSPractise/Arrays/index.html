@@ -25,7 +25,8 @@
         <br/>
         <button onclick="pushed()">PUSH</button>
         <br/>
-        <p>TO DD OR REMOVE ELEMENTS FORM FIRST OF THE ARRAY WE USE SHIFT AND UNSHIFT</p>
+        <div>POP=SHIFT and PUSH=UNSHIFT</div>
+        <p>TO add OR remove ELEMENTS FORM FIRST OF THE ARRAY WE USE SHIFT AND UNSHIFT</p>
         <p>SHIFT RESULT:</p>
         <p id="shift"></p><br/>
         <button type="button" onclick="shifted()">SHIFT</button>
@@ -34,6 +35,7 @@
         <p id="unshift"></p><br/>
         <button type="button" onclick="unshifted()">UNSHIFT</button>
 
+        <button onclick="del()">DELETE</button>
     <script>
             var arr=['one','two', 'three','four'];
             function joining(){
@@ -52,15 +54,20 @@
             function pushed(){
                 document.getElementById("push").innerHTML=arr.push("Madhu");
             }
-//TO add elements at beginning of the array use shift
+//Removes the first element from the array : shift
             function shifted(){
-                document.getElementById("shift").innerHTML=arr.shift("adding at first");
+                document.getElementById("shift").innerHTML=arr.shift();
             }
-//TO remove array element from bginning
+//TO add elements at beginning of array  : unshift
             function unshifted(){
                 document.getElementById("unshift").innerHTML=arr.unshift("adding at first");
 
             }
+//delete element from an array delete will create undefined holes better to use pop or shift
+            function del(){
+                document.getElementById("del").innerHtml=delete arr[0];
+            }
+        
         </script>
     </body>
 </html>
