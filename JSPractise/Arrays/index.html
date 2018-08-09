@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Array-Methods</title>
+    </head>
+    <body>
+        <h3>ARRAY and IT's METHODS</h3>
+        <p>Array:['one','two', 'three','four']</p>
+        <p> JOIN RESULT:</p>
+        <span id="demo">"JOIN"</span><br/>
+        <button onclick="joining()">Join</button>
+        
+        <p> TOSTRING RESULT:</p>
+        <div id="string">ToString</div><br/>
+        <button onclick='tostring()'>TO STRING</button>
+
+        <p>POP PUSH: Applied to end of the array, pushed element will be added at the end and popped from the end</p>
+        
+        <p>PopResults:</p>
+        <div id="pop"></div><br/>
+        <button onclick="popped()">POP</button>
+
+        
+        <p>Pushed Result:</p>
+        <div id="push"></div>
+        <br/>
+        <button onclick="pushed()">PUSH</button>
+        <br/>
+        <p>TO DD OR REMOVE ELEMENTS FORM FIRST OF THE ARRAY WE USE SHIFT AND UNSHIFT</p>
+        <p>SHIFT RESULT:</p>
+        <p id="shift"></p><br/>
+        <button type="button" onclick="shifted()">SHIFT</button>
+
+        <p>UNSHIFT RESULT:</p>
+        <p id="unshift"></p><br/>
+        <button type="button" onclick="unshifted()">UNSHIFT</button>
+
+    <script>
+            var arr=['one','two', 'three','four'];
+            function joining(){
+//join method is used join the array elements into string with specific charachter sent in argument   
+             document.getElementById("demo").innerHTML=arr.join();
+            }
+//converts to string
+            function tostring(){
+                document.getElementById("string").innerHTML=arr.toString();
+            }
+            function popped(){
+//Removes last element from existing array
+                document.getElementById("pop").innerHTML=arr.pop();
+            }
+//Adds pushed element and o/p is length of the array
+            function pushed(){
+                document.getElementById("push").innerHTML=arr.push("Madhu");
+            }
+//TO add elements at beginning of the array use shift
+            function shifted(){
+                document.getElementById("shift").innerHTML=arr.shift("adding at first");
+            }
+//TO remove array element from bginning
+            function unshifted(){
+                document.getElementById("unshift").innerHTML=arr.unshift("adding at first");
+
+            }
+        </script>
+    </body>
+</html>
