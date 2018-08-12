@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Array- Methods
+        </title>
+    </head>
+    <body>
+        <h3>Array-Methods</h3>
+        <p>Fruits Array:['Apple','Orange','Mango','Apple1','Banana']</p>
+        <button onclick="slicing()">SLICE-2</button>
+        <span id="slice"></span><br/>
+        <button onclick="slicing2()">SLICE(2,4)</button>
+        <span id="slicing2"></span><br/>
+        <button onclick="splice1()">SPLICE(0,1)</button>
+        <span id="splice1"></span>
+        <br/>
+        <button onclick="spliceAdd()">SPLICE(2,0,"KIWI, AVACADO")</button>
+        <span id="spliceAdd"></span><br/>
+
+        <button onclick="conc()">Concatination</button>
+        <span id="conc"></span><br/>
+
+        <button onclick="concMany()">ConcotinateMany</button>
+        <span id="concMany"></span>
+        <script>
+            var fruits=['Apple','Orange','Mango','Apple1','Banana'];
+          //Slice creates a new array copy with old array elements
+            function slicing(){
+                var newArr=fruits.slice(2);
+                document.getElementById("slice").innerHTML=newArr;
+            }
+            function slicing2(){
+                var newArr=fruits.slice(2,4);
+                document.getElementById("slicing2").innerHTML=newArr;
+            }
+            function splice1(){
+                var newArr=fruits.splice(0,1);
+                document.getElementById("splice1").innerHTML=newArr+" WOO YOU REMOVED";
+            }
+            function spliceAdd(){
+                var newArr=fruits.splice(2,0,"Kiwi, Avacado");
+                document.getElementById("spliceAdd").innerHTML=newArr;
+            }
+            function conc(){
+                var myGirls = ["Cecilie", "Lone"];
+                var myBoys = ["Emil", "Tobias", "Linus"];
+                var myChildren = myGirls.concat(myBoys);
+
+                document.getElementById("conc").innerHTML = myChildren;
+            }
+            function concMany(){
+                var arr1 = ["Cecilie", "Lone"];
+                var arr2 = ["Emil", "Tobias", "Linus"];
+                var arr3 = ["Robin", "Morgan"];
+                var myChildren = arr1.concat(arr2, arr3); 
+                document.getElementById("concMany").innerHTML=myChildren;
+
+            }
+        </script>
+    </body>
+</html>

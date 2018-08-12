@@ -6,48 +6,53 @@
     <body>
         <div>
             <label>First Number</label>
-            <input type="number" name="first" value="Input here"/>
+            <input id="first" type="number" name="first" value="Input here"/>
              
         
             <label>Second Number</label>
-            <input type="number" name="second"/>
+            <input id="second" type="number" name="second"/>
             <label>Result:</label>
             <span id="res"></span>
-            <button type="button" onclick="add()">ADD</button>
+            <button id="add" type="button" onclick="add()">ADD</button>
             <button type="button" onclick="dec()">DEC</button>
             <button type="button" onclick="mul()">MUL</button>
             <button type="button" onclick="div()">DIV</button>
         </div>
-        <!-- <script src="./Arthemtics.js" /> -->
-        <script>
-            var one=first.value;
-            var second=first.value;
+        
+        <script >
+           
+           function add(){
+            var first = Number(document.getElementById("first").value);
+            var second = Number(document.getElementById("second").value);
+            //alert("clciked");
+            
+        // var btnAdd=document.getElementById("add");
+        // btnAdd.addEventListener(click, function(first,second){
+            var result=first+second;
+            console.log(result);
+            document.getElementById("res").innerHTML=result;
+                }
 
-            //Addition function
-            function add(){
-              var result=5+6;
-             document.getElementById("res").innerHTML=result;
-            }
+                function dec(){
+                    var first = Number(document.getElementById("first").value);
+                    var second = Number(document.getElementById("second").value);
+                    var result=first-second;
+                    document.getElementById("res").innerHTML=result;
+                }
 
-            //Dec function
-            function dec(){
-                var result=5+6;
-                document.getElementById("res").innerHTML=result;
-            }
+                function mul(){
+                    var first = Number(document.getElementById("first").value);
+                    var second = Number(document.getElementById("second").value);
+                    var result=first*second;
+                    document.getElementById("res").innerHTML=result;
+                }
 
-            //Multiplcation function
-            function mul(){
-                var result=5+6;
-                document.getElementById("res").innerHTML=result;
-            }
-
-            //Division Function
-            function div(){
-                var result=5+6;
-                document.getElementById("res").innerHTML=result;
-            }
-
-
+                function div(){
+                    var first = Number(document.getElementById("first").value);
+                    var second = Number(document.getElementById("second").value);
+                    var result=first/second;
+                    document.getElementById("res").innerHTML=result;
+                }
         </script>
     </body>
 </html>
