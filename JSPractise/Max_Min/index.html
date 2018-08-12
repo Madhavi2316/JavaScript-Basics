@@ -5,6 +5,7 @@
         <input type="text" id="second"/>
         <span id="res"></span>
         <button onclick="max()">Find the Largest</button>
+        <button onclick="min()">Find the Smallest</button>
 
         <script>
             function max(){
@@ -18,6 +19,20 @@
                 {
                     document.getElementById("res").innerHTML=second;
                     console.log(first);
+                }
+
+            }
+            function min(){
+                var first=Number(document.getElementById("first").value);
+                var second=Number(document.getElementById("second").value);
+                if(first<second){
+                    document.getElementById("res").innerHTML=first;
+                    console.log(first);
+                }
+                else
+                {
+                    document.getElementById("res").innerHTML=second;
+                    console.log(second);
                 }
 
             }
