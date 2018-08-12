@@ -1,0 +1,27 @@
+<html>
+    <head><title>Max-Min</title></head>
+    <body>
+        <input type="text" id="first"/>
+        <input type="text" id="second"/>
+        <span id="res"></span>
+        <button onclick="max()">Find the Largest</button>
+
+        <script>
+            function max(){
+                var first=Number(document.getElementById("first").value);
+                var second=Number(document.getElementById("second").value);
+                if(first>second){
+                    document.getElementById("res").innerHTML=first;
+                    console.log(first);
+                }
+                else
+                {
+                    document.getElementById("res").innerHTML=second;
+                    console.log(first);
+                }
+
+            }
+        </script>
+    </body>
+    
+</html>
